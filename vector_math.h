@@ -39,7 +39,7 @@ out& operator <<(out& out, const Vector& vec)
     return out;
 }
 
-Vector operator *(const Vector& ls_vector, const double& rs_factor)
+Vector operator *(const Vector& ls_vector, const flt& rs_factor)
 {
     Vector result{ls_vector};
     for (int index{0}; index < ls_vector.size(); ++index)
@@ -133,7 +133,7 @@ struct Matrix
     {
     }
     Matrix(const int size):
-        vectors{arr<Vector>(size, arr<double>(size))}
+        vectors{arr<Vector>(size, arr<flt>(size))}
     {
     }
 
@@ -195,7 +195,7 @@ Matrix operator *(const flt& ls_factor, Matrix rs_matrix)
     return rs_matrix;
 }
 
-void operator *=(Matrix& ls_matrix, const double& rs_factor)
+void operator *=(Matrix& ls_matrix, const flt& rs_factor)
 {
     for (int i{0}; i < ls_matrix.size(); ++i)
     {
