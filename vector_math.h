@@ -14,12 +14,12 @@ struct Vector
     elements{data}
     {
     }
-    double& operator ()(const int& index)
+    flt& operator ()(const int& index)
     {
         return elements[index];
     }
 
-    double operator ()(const int& index) const
+    flt operator ()(const int& index) const
     {
         return elements[index];
     }
