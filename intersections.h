@@ -64,7 +64,7 @@ flt hit(const arr<flt>& intersections)
     {
         return intersections[0];
     }
-    if(intersections.size() == 2)
+    else
     {
         flt least{INT_MAX};
         for (auto& item: intersections)
